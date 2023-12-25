@@ -13,5 +13,5 @@ pub fn twoSum(allocator: Allocator, nums: []const isize, target: isize) ![2]usiz
         const expected = target - num;
         seen.putAssumeCapacityNoClobber(expected, idx);
     }
-    unreachable;
+    return error.NoAnswer;
 }

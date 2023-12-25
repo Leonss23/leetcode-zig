@@ -8,5 +8,5 @@ pub fn twoSum(nums: []const isize, target: isize) [2]isize {
             if (expected == y) return .{ @intCast(i), @intCast(j) };
         }
     }
-    unreachable;
+    return error.NoAnswer;
 }
