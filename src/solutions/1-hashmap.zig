@@ -1,7 +1,6 @@
 const std = @import("std");
 const Allocator = std.mem.Allocator;
 
-/// [Two Sum - Leetcode](https://leetcode.com/problems/two-sum/)
 pub fn twoSum(allocator: Allocator, nums: []const isize, target: isize) ![2]usize {
     var seen = std.AutoHashMap(isize, usize).init(allocator);
     defer seen.deinit();
