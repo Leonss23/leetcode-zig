@@ -1,5 +1,3 @@
-const module = @import("./solutions/1.zig");
-
 const tests = .{ .{
     .{ 0, 1 },
     .{
@@ -27,8 +25,15 @@ const tests = .{ .{
 // Only one valid answer exists.
 
 const utils = @import("./testing_utils.zig");
-const function = utils.getFunction(module);
 
-test "two sum" {
+test "1. Two Sum - Bruteforce" {
+    const module = @import("./solutions/1-bruteforce.zig");
+    const function = utils.getFunction(module);
+    try utils.testSolution(function, tests);
+}
+
+test "1. Two Sum - Hashmap" {
+    const module = @import("./solutions/1-hashmap.zig");
+    const function = utils.getFunction(module);
     try utils.testSolution(function, tests);
 }
