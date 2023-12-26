@@ -1,5 +1,3 @@
-const module = @import("./solutions/217.zig");
-
 const tests = .{ .{
     true,
     .{
@@ -22,8 +20,9 @@ const tests = .{ .{
 // -10^9 <= nums[i] <= 10^9
 
 const utils = @import("./testing_utils.zig");
-const function = utils.getFunction(module);
 
-test "contains duplicate" {
+test "217. Contains Duplicate" {
+    const module = @import("./solutions/217.zig");
+    const function = utils.getFunction(module);
     try utils.testSolution(function, tests);
 }
