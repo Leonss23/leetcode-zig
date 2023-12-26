@@ -1,7 +1,6 @@
 const std = @import("std");
-const Allocator = std.mem.Allocator;
 
-pub fn twoSum(allocator: Allocator, nums: []const isize, target: isize) ![2]usize {
+pub fn twoSum(allocator: std.mem.Allocator, nums: []const isize, target: isize) ![2]usize {
     var seen = std.AutoHashMap(isize, usize).init(allocator);
     defer seen.deinit();
     try seen.ensureTotalCapacity(@intCast(nums.len));
