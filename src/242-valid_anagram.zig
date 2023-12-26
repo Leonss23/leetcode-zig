@@ -1,5 +1,3 @@
-const module = @import("./solutions/242.zig");
-
 const tests = .{
     .{
         true,
@@ -20,8 +18,15 @@ const tests = .{
 // s and t consist of lowercase English letters
 
 const utils = @import("./testing_utils.zig");
-const function = utils.getFunction(module);
 
-test "valid anagram" {
+test "242. Valid Anagram - Hashmap" {
+    const module = @import("./solutions/242-hashmap.zig");
+    const function = utils.getFunction(module);
+    try utils.testSolution(function, tests);
+}
+
+test "242. Valid Anagram - Sort" {
+    const module = @import("./solutions/242-sort.zig");
+    const function = utils.getFunction(module);
     try utils.testSolution(function, tests);
 }
