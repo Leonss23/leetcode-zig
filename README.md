@@ -1,5 +1,3 @@
 # Leetcode with Zig
 
-## Usage
-
-- Run using `zig test <file>`
+Run using `zig test <file>`
